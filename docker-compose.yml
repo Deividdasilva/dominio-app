@@ -13,7 +13,7 @@ services:
         networks:
             - laravel-9
         command: >
-            sh -c "npm install && npm run build && php-fpm"
+            sh -c "composer install && npm install && npm run build && php artisan migrate --force && php-fpm"
 
     # nginx
     nginx:
