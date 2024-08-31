@@ -10,10 +10,6 @@
 
     <form action="{{ route('domain-rules.store') }}" method="POST">
         @csrf
-        {{-- <div class="form-group">
-            <label for="domain">Domínio</label>
-            <input type="text" name="domain" id="domain" class="form-control" value="{{ old('domain') }}" required>
-        </div> --}}
         <div class="form-group">
             <label for="domain">Domínio</label>
             <input type="text" name="domain" id="domain" class="form-control @error('domain') is-invalid @enderror" value="{{ old('domain') }}" placeholder="Digite o domínio">

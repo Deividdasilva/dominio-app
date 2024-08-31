@@ -8,8 +8,7 @@
         </div>
     </div>
 
-    <!-- Usando card do Bootstrap com estilo escuro e bordas arredondadas -->
-    <div class="card bg-secondary text-white mt-3 rounded" style="border-radius: 5px;"> <!-- Raio personalizado -->
+    <div class="card bg-secondary text-white mt-3 rounded" style="border-radius: 5px;">
         <div class="card-body">
             <h5 class="card-title">Domínio: {{ $domainRule->domain }}</h5>
             <p class="card-text"><strong>Tipo de Regra:</strong> {{ $domainRule->rule_type == 'allow' ? 'Permitir' : 'Bloquear' }}</p>

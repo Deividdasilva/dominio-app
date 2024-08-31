@@ -13,7 +13,7 @@ Route::get('/', function () {
 // Rotas protegidas por autenticação
 Route::middleware(['auth'])->group(function () {
     // Rotas de criação e listagem de regras de domínio
-    Route::resource('domain-rules', DomainRuleController::class)->except(['edit', 'update', 'destroy']);
+    Route::resource('domain-rules', DomainRuleController::class);
 
     // Aplicando o middleware para garantir que apenas o proprietário possa editar, atualizar ou excluir
     Route::middleware(['check.owner'])->group(function () {
@@ -22,6 +22,7 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('domain-rules/{domainRule}', [DomainRuleController::class, 'destroy'])->name('domain-rules.destroy');
     });
 });
+
 
 // Rotas de perfil
 Route::middleware('auth')->group(function () {

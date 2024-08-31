@@ -21,7 +21,6 @@
             @enderror
         </div>
 
-        <!-- Agrupar campos em uma linha com borda em cada campo -->
         <div class="form-row">
             <div class="col-md-4 mb-3">
                 <label for="rule_type">Tipo de Regra</label>
